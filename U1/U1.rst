@@ -2,7 +2,7 @@
 Fundamentos de Programación
 ===========================
 
-:Autor: Emiliano López <emiliano.lopez@gmail.com>
+:Autor: Emiliano López <emiliano [dot] lopez [at] gmail [dot] com>
 :Fecha: 04/09/2014
 
 --------------------------------------
