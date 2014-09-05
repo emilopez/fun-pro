@@ -51,7 +51,17 @@ Ejercicio 1
 En el siguiente ejemplo se muestra un programa en C++. Destaque las diferencias con un programa realizado en pseudocódigo.
 
 .. code-block:: cpp
-	:include: src/ej6.6.cpp
+	
+	#include <iostream>
+	using namespace std;
+
+	int main(int argc, char *argv[]) {
+		float C, F;
+		C = 21;
+		F = (9/5)*C + 32;
+		cout<<C<<" grados Celsius son "<<F<<" grados Fahrenheit";
+		return 0;
+	}
 
 Analice el código del siguiente programa C++ utilizado para la conversión entre grados Celsius y Fahrenheit. ¿Los resultados son correctos? ¿Qué modificación haría?
 
