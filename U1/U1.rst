@@ -16,12 +16,6 @@ Objetivos
 - Desarrollar programas secuenciales utilizando el lenguaje C++
 - Implementar en computadoras: diseñar, editar, compilar, programar y depurar programas.
 
-Temas teóricos que se integran
-//////////////////////////////
-
-- Introducción al Lenguaje C++. Estructura de un programa C++. Tokens del lenguaje. Constantes.Variables. Ámbito de validez de las variables. Flujos de entrada y salida. 
-- Edición, prueba y depuración de programas empleando un compilador C++.
-
 Bibliografía y referencias
 //////////////////////////
 
