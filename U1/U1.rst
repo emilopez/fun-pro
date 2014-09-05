@@ -48,7 +48,7 @@ Ejercicios
 Ejercicio 1
 +++++++++++
 
-En el siguiente ejemplo se muestra un programa en C++. Destaque las diferencias con un programa realizado en pseudocódigo.
+En el siguiente ejemplo se muestra un programa en C++:
 
 .. code-block:: cpp
 	
