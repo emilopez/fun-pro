@@ -20,7 +20,6 @@ Objetivos
 - Comprender la noción de abstracción de datos y la necesidad de crear una estructura definida por el usuario.
 - Comprender el mecanismo utilizado para arreglos y structs como argumentos de funciones.
 
-
 Bibliografía y referencias
 //////////////////////////
 
@@ -38,10 +37,6 @@ Bibliografía y referencias
 - www.cprogramming.com/tutorial/lesson7.html
 - www.cprogramming.com/tutorial/lesson8.html
 - http://es.wikibooks.org/wiki/Programación_en_C++/Estructuras
-
-----------------
-Structs en C++
-----------------
 
 Introducción
 ------------
