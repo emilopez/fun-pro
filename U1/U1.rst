@@ -133,7 +133,6 @@ Ej. 2
     	cout<<setfill('.');
     	setprecision();
     
-    
     	cout<<setw(10)<<left<<"Pulgadas";
     	cout<<setw(20)<<right<<fixed<<pulgadas<<endl;
     
@@ -145,8 +144,6 @@ Ej. 2
     
     	cout<<setw(10)<<left<<"Millas";
     	cout<<setw(20)<<right<<millas<<endl;
-        
-    
     	return 0;
 	}
 
