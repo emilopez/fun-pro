@@ -5,9 +5,9 @@ Fundamentos de Programación
 :Autor: Emiliano López <emiliano [dot] lopez [at] gmail [dot] com>
 :Fecha: 04/09/2014
 
---------------------------
-Unidad 4: Arrays y Structs
---------------------------
+----------------------------
+Unidad 4: Arreglos y Structs
+----------------------------
 
 Objetivos
 /////////
