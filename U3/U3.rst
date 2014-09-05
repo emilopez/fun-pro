@@ -36,7 +36,7 @@ Bibliografía y referencias
 - http://es.wikibooks.org/wiki/Programación_en_C++/Funciones
 
 Motivación
------------
+//////////
 
 ¿Qué son?
 	Conjunto de operaciones agrupadas que pueden ser **invocadas** desde diferentes partes de un
@@ -48,7 +48,7 @@ Ventajas
 	- Posibilitan la reusabilidad del código, llamar funciones desde distintos programas.
 
 Ejemplo 1: número par
----------------------
+/////////////////////
 
 - Programa principal
 
