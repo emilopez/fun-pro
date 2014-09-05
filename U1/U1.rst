@@ -65,12 +65,6 @@ En el siguiente ejemplo se muestra un programa en C++. Destaque las diferencias 
 
 Analice el código del siguiente programa C++ utilizado para la conversión entre grados Celsius y Fahrenheit. ¿Los resultados son correctos? ¿Qué modificación haría?
 
-**Características de C++:**
-
-- Compilado
-- Estáticamente tipado
-- Case sensitive
-
 Ejercicio 2
 +++++++++++
 
