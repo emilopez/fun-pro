@@ -51,7 +51,7 @@ Ejercicio 0  (6.6)
 En el siguiente ejemplo se muestra un programa en C++. Destaque las diferencias con un programa realizado en pseudocódigo.
 
 .. code-block:: cpp
-	:include: ej/ej6.6.cpp
+	:include: src/ej6.6.cpp
 
 Analice el código del siguiente programa C++ utilizado para la conversión entre grados Celsius y Fahrenheit. ¿Los resultados son correctos? ¿Qué modificación haría?
 
@@ -107,10 +107,10 @@ Ej. 1
 +++++
 
 .. code-block:: cpp
-	:include: ej/ej6.7.cpp
+	:include: src/ej6.7.cpp
 
 Ej. 2
 +++++
 
 .. code-block:: cpp
-	:include: ej/ej6.8.cpp
+	:include: src/ej6.8.cpp
