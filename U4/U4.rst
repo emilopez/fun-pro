@@ -111,7 +111,7 @@ Ahora bien, también podemos declarar un arreglo o matriz de este nuevo tipo de 
 		cin>>listado[i].CUIT;
 		cout<<"Edad: ";
 		cin>>listado[i].edad;
-		cin.ignore();				// limpia el <enter> que deja el cin en el buffer
+		cin.ignore();			// limpia el <enter> que deja el cin en el buffer
 	}
 
 
@@ -120,7 +120,7 @@ Structs en funciones
 
 Una función puede recibir un struct como parámetro de entrada, puede retornarlo en su nombre, o también puede recibirlo como parámetro por referencia para ser modificado en la función.
 
-Lo único que se debe tener en cuenta a la hora de usarlos en funciones es que deben ser declarados antes del **main()**. Un programa fuente con funciones y, structs como argumentos de esas funciones quedaría de la siguiente forma:
+Lo único que se debe tener en cuenta a la hora de usarlos en funciones es que deben ser declarados antes del **main()**. Un programa fuente con funciones y, structs como argumentos de esas funciones, quedaría de la siguiente forma:
 
 .. code-block:: cpp
 
@@ -158,7 +158,7 @@ Ahora, para pasar por referencia un struct lo único que hay que hacer es antepo
 		e.edad = e.edad + 1;
 	}
 
-Es muy simple, recibe un empleado por referencia modifica -en este ejemplo- un campo, ese cambio en la variable de tipo empleado se verá reflejado desde el programa principal. Su uso desde el *main()* podría ser así:
+Es muy simple, recibe un empleado por referencia modifica -en este ejemplo- el campo edad, ese cambio en la variable de tipo empleado se verá reflejado desde el programa principal. Su uso desde el *main()* podría ser así:
 
 .. code-block:: cpp
 
@@ -172,23 +172,22 @@ Es muy simple, recibe un empleado por referencia modifica -en este ejemplo- un c
 		e1.CUIT = 111;
 		e1.edad = 999;
 		
-		//llamo a la funcion 
+		// llamo a la funcion 
 		inc_edad(e1);
-
 		// corroboro si modifico la edad
 		cout<<e1.edad;		
 	
 		return 0;
 	}
 	
-Entonces, luego de leer los 50 empleados podríamos haber llamado inc_edad desde el código del *main*:
+Entonces, luego de leer los 50 empleados podríamos haber llamado *inc_edad* desde el código del *main*:
 
 .. code-block:: cpp
 
 	int main(int argc, char *argv[]) {
 		empleado listado[50];
 
-		// Los cargo
+		// lectura
 		for (int i = 0; i<50;i++){
 			cout<<"Nombre y Apellido: ";
 			getline(cin,listado[i].nomape);
@@ -196,7 +195,7 @@ Entonces, luego de leer los 50 empleados podríamos haber llamado inc_edad desde
 			cin>>listado[i].CUIT;
 			cout<<"Edad: ";
 			cin>>listado[i].edad;
-			cin.ignore();				// limpia el <enter> que deja el cin en el buffer
+			cin.ignore();			// limpia el <enter> que deja el cin en el buffer
 		}
 
 		// llamo 50 veces a inc_edad
@@ -208,7 +207,7 @@ Entonces, luego de leer los 50 empleados podríamos haber llamado inc_edad desde
 		return 0;
 	}
 
-Ojo, notar que NO ENVIAMOS el arreglo de structs, sino UN ÚNICO struct, por qué? porque así programamos la función, para que reciba UN struct. Si queremos una función que reciba un arreglo de struct hagamos eso. Por ejemplo, una que nos devuelva el empleado de mayor edad. 
+Ojo, notar que NO ENVIAMOS el arreglo de structs, sino **UN ÚNICO** struct en cada iteración, por qué? porque así programamos la función, para que reciba **UN** struct. Si queremos una función que reciba un arreglo de struct hagamos eso. Por ejemplo, una que nos devuelva el empleado de mayor edad. 
 
 Para eso es necesario recibir TODOS los empleados y devolver de alguna manera el empleado que cumple con la consigna.
 
@@ -244,7 +243,7 @@ Para eso es necesario recibir TODOS los empleados y devolver de alguna manera el
 	}
 
 Lo interesante de la función mayor es que devuelve un struct empleado completo, con todas las variables miembro. 
-Esto mismo se podría haber hecho utilizando una función *void* que devuelva los valores en uno de sus argumentos pasados por referencia, es otra manera de hacer lo mismo. Podría haber sido así:
+Esto mismo se podría haber hecho utilizando una función **void** que devuelva los valores en uno de sus argumentos pasados por referencia, es otra manera de hacer lo mismo. Podría haber sido así:
 
 .. code-block:: cpp
 	void mayor(empleado lista[], int N, empleado &em){
@@ -275,7 +274,7 @@ Notar que se hace una asignación completa, de todos sus miembros de una única 
 		return 0;
 	}
 
-Ojo que los **arreglos de strucs** como argumento de funciones pasan por referencia al igual que un arreglo de un tipo de dato estándar. Por ejemplo, si queremos incrementar en uno la edad de todos los empleados, podríamos hacer una función así:
+Ojo que los **arreglos de strucs** como argumento de funciones, pasan por referencia al igual que un arreglo de un tipo de dato estándar. Por ejemplo, si queremos incrementar en uno la edad de todos los empleados, podríamos hacer una función así:
 
 .. code-block:: cpp
 
@@ -284,7 +283,7 @@ Ojo que los **arreglos de strucs** como argumento de funciones pasan por referen
 			listado[i].edad++;
 	}
 
-No hizo falta usar el **&** precediendo **lista[]** porque **LOS ARREGLOS POR DEFECTO PASAN POR REFERENCIA**, con lo cual podemos cambiar el contenido dentro de la función y veremos esos cambios reflejados en el programa principal.
+No hizo falta usar el **&** precediendo **lista[]** porque los arreglos **por defecto pasan por referencia**, con lo cual podemos cambiar el contenido dentro de la función y veremos esos cambios reflejados en el programa principal.
 
 Pero pregunto, si pasamos un struct que dentro tiene como miembro un arreglo y pasamos ese struct a una función sin indicar con el **&** que es por referencia, y dentro de la función cambiamos el contenido del arreglo, esos cambios se ven reflejados?? Si/No??
 
