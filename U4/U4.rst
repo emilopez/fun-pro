@@ -49,7 +49,7 @@ Un struct se declara de la siguiente manera:
 
 	struct empleado{
 		int CUIT;
-		char nomape[50];
+		string nomape;
 		int edad;
 	};
 
@@ -64,8 +64,8 @@ Se lo usa como un nuevo tipo de dato, así como antes declarabamos una variable 
 	// declaro dos empleados
 	empleado e1,e2;
 	
-	// Leo los datos de uno
-	cin.getline(e1.nomape,50);
+	// leo los datos de uno
+	getline(cin,e1.nomape);
 	cin>>e1.CUIT;
 	cin>>e1.edad;
 
@@ -86,11 +86,11 @@ Por supuesto que podría haber hecho la asignación miembro a miembro, sería as
 .. code-block:: cpp
 	
 	// asigno miembro a miembro
-	strcpy(e2.nomape,e1.nomape);
+	e2.nomape = e1.nomape;
 	e2.CUIT = e1.CUIT;
 	e2.edad = e1.edad
 
-Obviamente que, a menos que me paguen por caracter, me conviene la asignación completa.
+Obviamente que, a menos que me paguen por caracter escrito, me conviene la asignación completa.
 
 Structs en arreglos
 -------------------
@@ -105,9 +105,13 @@ Ahora bien, también podemos declarar un arreglo o matriz de este nuevo tipo de 
 
 	// Los cargo
 	for (int i = 0; i<50;i++){
-		cin.getline(listado[i].nomape,50);
+		cout<<"Nombre y Apellido: ";
+		getline(cin,listado[i].nomape);
+		cout<<"CUIT: ";
 		cin>>listado[i].CUIT;
+		cout<<"Edad: ";
 		cin>>listado[i].edad;
+		cin.ignore();				// limpia el <enter> que deja el cin en el buffer
 	}
 
 
@@ -116,114 +120,117 @@ Structs en funciones
 
 Una función puede recibir un struct como parámetro de entrada, puede retornarlo en su nombre, o también puede recibirlo como parámetro por referencia para ser modificado en la función.
 
-Lo único que se debe tener en cuenta a la hora de usarlos en funciones es que deben ser declarados antes del **main()**. Un programa fuente con funciones y structs como argumentos de esas funciones quedaría de la siguiente forma:
+Lo único que se debe tener en cuenta a la hora de usarlos en funciones es que deben ser declarados antes del **main()**. Un programa fuente con funciones y, structs como argumentos de esas funciones quedaría de la siguiente forma:
 
 .. code-block:: cpp
 
 	#include <iostream>
+	#include <string>
 	using namespace std;
+
 	//declaro struct
 	struct empleado{
   		int CUIT;
-   		char nomape[50];
+   		string nomape;
    		int edad;
 	};
 	//prototipos de funciones
-	void show(empleado e);
+	void funcionX(empleado e);
 	
 	int main(int argc, char *argv[]) {
 		// aca va el codigo que usa las funciones
 		return 0;
 	}
 	// implementacion de funciones	
-	void show(empleado e){
-		cout<<e.nomape<<endl;
-		cout<<e.CUIT<<endl;
-		cout<<e.edad<<endl;
+	void funcionX(empleado e){
+		// ...
+		// acciones de la funcion
+		// ...
 	}
 	
 
-En el ejemplo previo, se observa un ejemplo de una función *show* que imprime el contenido de un struct empleado que se recibe como argumento.
-
-Ahora, para pasar por referencia un struct lo único que hay que hacer es anteponer el símbolo **&** a la variable struct. Hagamos una función **leer** que nos deje claro el funcionamiento:
+Ahora, para pasar por referencia un struct lo único que hay que hacer es anteponer el símbolo **&** a la variable struct. Hagamos una función que incremente en uno la edad del empleado:
 
 .. code-block:: cpp
 
 	// implementacion de funciones	
-	void leer(empleado &e){
-		cin.getline(e.nomape,50);
-		cin>>e.CUIT;
-		cin>>e.edad;
+	void inc_edad(empleado &e){
+		e.edad = e.edad + 1;
 	}
 
-Es muy simple, recibe un empleado por referencia y lo lee, ese cambio en la variable de tipo empleado se verá reflejado desde el programa principal. Su uso desde el *main()* podría ser así:
+Es muy simple, recibe un empleado por referencia modifica -en este ejemplo- un campo, ese cambio en la variable de tipo empleado se verá reflejado desde el programa principal. Su uso desde el *main()* podría ser así:
 
 .. code-block:: cpp
 
 	//prototipos de funciones
-	void show(empleado e);
-	void leer(empleado &e);
+	void inc_edad(empleado &e);
 	int main(int argc, char *argv[]) {
 		empleado e1;
 
-		// lleno con cualquier cosa para ver si anda
-		strcpy(e1.nomape,"prueba");
+		// completo con cualquier dato
+		e1.nomape = "prueba";
 		e1.CUIT = 111;
 		e1.edad = 999;
 		
 		//llamo a la funcion 
-		leer(e1);
+		inc_edad(e1);
 
-		// muestro a ver si modifico
-		show(e1);		
+		// corroboro si modifico la edad
+		cout<<e1.edad;		
 	
 		return 0;
 	}
 	
-Entonces, si por ejemplo queremos leer los 50 empleados podríamos haber hecho lo siguiente desde el código del *main*:
+Entonces, luego de leer los 50 empleados podríamos haber llamado inc_edad desde el código del *main*:
 
 .. code-block:: cpp
 
 	int main(int argc, char *argv[]) {
 		empleado listado[50];
 
-		// llamo 50 veces a leer
+		// Los cargo
 		for (int i = 0; i<50;i++){
-			// le mando UN SOLO struct
-			leer(listado[i]);
+			cout<<"Nombre y Apellido: ";
+			getline(cin,listado[i].nomape);
+			cout<<"CUIT: ";
+			cin>>listado[i].CUIT;
+			cout<<"Edad: ";
+			cin>>listado[i].edad;
+			cin.ignore();				// limpia el <enter> que deja el cin en el buffer
 		}
 
-		// llamo 50 veces a show
+		// llamo 50 veces a inc_edad
 		for (int i = 0; i<50;i++){
 			// le mando UN SOLO struct
-			show(listado[i]);
+			inc_edad(listado[i]);
 		}
 	
 		return 0;
 	}
 
-Ojo, notar que en las funciones creadas NO LES ENVIAMOS el arreglo de structs, sino UN ÚNICO STRUCT, por qué? porque así programamos la función, para que reciba UN STRUCT. Si queremos una función que reciba un arreglo de struct hagamos eso. Por ejemplo, una que nos devuelva el empleado de mayor edad. 
+Ojo, notar que NO ENVIAMOS el arreglo de structs, sino UN ÚNICO struct, por qué? porque así programamos la función, para que reciba UN struct. Si queremos una función que reciba un arreglo de struct hagamos eso. Por ejemplo, una que nos devuelva el empleado de mayor edad. 
 
 Para eso es necesario recibir TODOS los empleados y devolver de alguna manera el empleado que cumple con la consigna.
 
 .. code-block:: cpp
 
 	//prototipos de funciones
-	void show(empleado e);
-	void leer(empleado &e);
+
 	empleado mayor(empleado lista[], int N);
 
 	int main(int argc, char *argv[]) {
 		empleado listado[50];
-		// ya los leimos
-		// el codigo para leerlos iria aca
+
+		// -> el codigo para leerlos iria aca <-
 		
 		empleado mayor_emp = mayor(listado, 50);
 		cout<<"Empleado mayor: "<<endl;
-		show(mayor_emp)
+		cout<<mayor_emp.nomape;
+		cout<<mayor_emp.CUIT;
+		cout<<mayor_emp.edad;
 		return 0;
 	}
-	//aca irian las funciones hechas previamente
+	// -> aca irian las funciones hechas previamente <-
 	empleado mayor(empleado lista[], int N){
 		int edadm lista[0].edad;
 		int posm = 0;
@@ -237,7 +244,7 @@ Para eso es necesario recibir TODOS los empleados y devolver de alguna manera el
 	}
 
 Lo interesante de la función mayor es que devuelve un struct empleado completo, con todas las variables miembro. 
-Esto mismo se podría haber hecho utilizando una función *void* que devuelva los valores en uno de sus argumentos pasados por referencia, podría haber sido así:
+Esto mismo se podría haber hecho utilizando una función *void* que devuelva los valores en uno de sus argumentos pasados por referencia, es otra manera de hacer lo mismo. Podría haber sido así:
 
 .. code-block:: cpp
 	void mayor(empleado lista[], int N, empleado &em){
@@ -256,21 +263,23 @@ Notar que se hace una asignación completa, de todos sus miembros de una única 
 	int main(int argc, char *argv[]) {
 		empleado listado[50];
 
-		// ya los leimos
-		// el codigo para leerlos iria aca
+		// -> el codigo para leerlos iria aca <- 
 		
-		empleado mayor_emp
-		mayor(listado, 50,mayor_emp);
+		empleado mayor_emp;
+		mayor(listado, 50, mayor_emp);
 		cout<<"Empleado mayor: "<<endl;
-		show(mayor_emp)
+		cout<<mayor_emp.nomape;
+		cout<<mayor_emp.CUIT;
+		cout<<mayor_emp.edad;
+		
 		return 0;
 	}
 
-Ojo que los **arreglos de strucs como argumento** de funciones pasan por referencia al igual que un arreglo de un tipo de dato estándar. Por ejemplo, si queremos incrementar en uno la edad de todos los empleados, podríamos hacer una función así:
+Ojo que los **arreglos de strucs** como argumento de funciones pasan por referencia al igual que un arreglo de un tipo de dato estándar. Por ejemplo, si queremos incrementar en uno la edad de todos los empleados, podríamos hacer una función así:
 
 .. code-block:: cpp
 
-	void incanio(empleado lista[], int N){
+	void inc_anio(empleado lista[], int N){
  		for (int i = 0; i<N;i++)
 			listado[i].edad++;
 	}
