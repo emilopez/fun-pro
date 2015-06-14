@@ -234,7 +234,7 @@ Para eso es necesario recibir TODOS los empleados y devolver de alguna manera el
 				posm = i;
 			}	
 		}
-	return listado[posm];
+		return listado[posm];
 	}
 
 Lo interesante de la función mayor es que devuelve un struct empleado completo, con todas las variables miembro. 
