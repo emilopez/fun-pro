@@ -6,17 +6,12 @@ Fundamentos de Programación
 :Fecha: 14/06/2015
 
 ----------------------------
-Unidad 4: Arreglos y Structs
+Tutorial de structs
 ----------------------------
 
 Objetivos
 /////////
 
-- Comprender la estructura de datos arreglo.
-- Comprender el uso de arreglos para almacenar y buscar valores.
-- Comprender cómo declarar e inicializar un arreglo, y cómo hacer referencia a los elementos individuales del mismo.
-- Declarar y manipular arreglos con múltiples subíndices.
-- Comprender la limitación de los arreglos en cuanto al uso de tipos de datos homogéneos
 - Comprender la noción de abstracción de datos y la necesidad de crear una estructura definida por el usuario.
 - Comprender el mecanismo utilizado para arreglos y structs como argumentos de funciones.
 
@@ -25,10 +20,10 @@ Bibliografía y referencias
 
 **Libros**
 
-- C++ Cómo programar. 5ta Ed. 2007. Deitel y Deitel. Pearson Educación- Prentice Hall. Capítulo 4 y 6.1 a 6.4.
-- El Lenguaje de Programación C++. 3ra Ed. 2001.Stroustrup Bjarne.Addison Wesley. Capítulos 5.2 y 5.7.
-- How to think like a computer scientist. 2012. Allen B. Downey. Capítulo 8.
-- Jumping into C++. Alex Allain (www.cprogramming.com). Capítulo 10 y 11.
+- C++ Cómo programar. 5ta Ed. 2007. Deitel y Deitel. Pearson Educación- Prentice Hall. Cap. 4 y 6.1 a 6.4.
+- El Lenguaje de Programación C++. 3ra Ed. 2001.Stroustrup Bjarne.Addison Wesley. Cap. 5.2 y 5.7.
+- How to think like a computer scientist. 2012. Allen B. Downey. Cap. 8.
+- Jumping into C++. Alex Allain (www.cprogramming.com). Cap. 10 y 11.
 
 **Web**
 
@@ -111,7 +106,7 @@ Ahora bien, también podemos declarar un arreglo o matriz de este nuevo tipo de 
 		cin>>listado[i].CUIT;
 		cout<<"Edad: ";
 		cin>>listado[i].edad;
-		cin.ignore();			// limpia el <enter> que deja el cin en el buffer
+		cin.ignore();		// limpia el <enter> del buffer
 	}
 
 
@@ -195,7 +190,7 @@ Entonces, luego de leer los 50 empleados podríamos haber llamado *inc_edad* des
 			cin>>listado[i].CUIT;
 			cout<<"Edad: ";
 			cin>>listado[i].edad;
-			cin.ignore();			// limpia el <enter> que deja el cin en el buffer
+			cin.ignore();		// limpia el <enter> del buffer
 		}
 
 		// llamo 50 veces a inc_edad
