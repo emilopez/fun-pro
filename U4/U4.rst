@@ -5,35 +5,8 @@ Fundamentos de Programación
 :Autor: Emiliano López <emiliano [dot] lopez [at] gmail [dot] com>
 :Fecha: 14/06/2015
 
-.. contents::
+.. contents:: Tutorial de structs
 
--------------------
-Tutorial de structs
--------------------
-
-Objetivos
-/////////
-
-- Comprender la noción de abstracción de datos y la necesidad de crear una estructura definida por el usuario.
-- Comprender el mecanismo utilizado para arreglos y structs como argumentos de funciones.
-
-Bibliografía y referencias
-//////////////////////////
-
-**Libros**
-
-- C++ Cómo programar. 5ta Ed. 2007. Deitel y Deitel. Pearson Educación- Prentice Hall. Cap. 4 y 6.1 a 6.4.
-- El Lenguaje de Programación C++. 3ra Ed. 2001.Stroustrup Bjarne.Addison Wesley. Cap. 5.2 y 5.7.
-- How to think like a computer scientist. 2012. Allen B. Downey. Cap. 8.
-- Jumping into C++. Alex Allain (www.cprogramming.com). Cap. 10 y 11.
-
-**Web**
-
-- http://www.cplusplus.com/doc/tutorial/arrays/
-- http://www.cplusplus.com/doc/tutorial/structures/
-- www.cprogramming.com/tutorial/lesson7.html
-- www.cprogramming.com/tutorial/lesson8.html
-- http://es.wikibooks.org/wiki/Programación_en_C++/Estructuras
 
 Structs
 -------
