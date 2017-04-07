@@ -13,6 +13,8 @@ Tabla de contenidos
 * `Structs <https://github.com/emilopez/fun-pro/blob/master/structs.rst>`__
 * `CStrings <https://github.com/emilopez/fun-pro/blob/master/cstrings.rst>`__
 
+Por completar:
+
 * `Vectores <https://github.com/emilopez/fun-pro/blob/master/pilasycolas.rst>`__
 * `Punteros <https://github.com/emilopez/fun-pro/blob/master/punteros.rst>`__
 * `Pilas y colas <https://github.com/emilopez/fun-pro/blob/master/pilas_y_colas.rst>`__
