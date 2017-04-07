@@ -18,6 +18,7 @@ Tabla de contenidos
 * `Pilas y colas <https://github.com/emilopez/fun-pro/blob/master/pilas_y_colas.rst>`__
 * `POO <https://github.com/emilopez/fun-pro/blob/master/poo.rst>`__
 * `Sobrecarga de operadores <https://github.com/emilopez/fun-pro/blob/master/sobrecarga.rst>`__
+* `Strings <https://github.com/emilopez/fun-pro/blob/master/strings.rst>`__
 * `Archivos de texto <https://github.com/emilopez/fun-pro/blob/master/archivos_texto.rst>`__
 * `Archivos de binarios <https://github.com/emilopez/fun-pro/blob/master/archivos_binarios.rst>`__
 * `Templates <https://github.com/emilopez/fun-pro/blob/master/templates.rst>`__
