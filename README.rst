@@ -14,8 +14,10 @@ Tabla de contenidos
 * `CStrings <https://github.com/emilopez/fun-pro/blob/master/cstrings.rst>`__
 
 * `Vectores <https://github.com/emilopez/fun-pro/blob/master/pilasycolas.rst>`__
+* `Punteros <https://github.com/emilopez/fun-pro/blob/master/punteros.rst>`__
 * `Pilas y colas <https://github.com/emilopez/fun-pro/blob/master/pilas_y_colas.rst>`__
 * `POO <https://github.com/emilopez/fun-pro/blob/master/poo.rst>`__
+* `Sobrecarga de operadores <https://github.com/emilopez/fun-pro/blob/master/sobrecarga.rst>`__
 * `Archivos de texto <https://github.com/emilopez/fun-pro/blob/master/archivos_texto.rst>`__
 * `Archivos de binarios <https://github.com/emilopez/fun-pro/blob/master/archivos_binarios.rst>`__
 * `Templates <https://github.com/emilopez/fun-pro/blob/master/templates.rst>`__
