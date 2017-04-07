@@ -1,4 +1,4 @@
-Tutorial en C++
+Tutorial de C++
 ===============
 
 :Autor: Emiliano López <emiliano [dot] lopez [at] gmail [dot] com>
