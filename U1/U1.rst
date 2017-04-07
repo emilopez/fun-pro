@@ -1,46 +1,13 @@
-===========================
-Fundamentos de Programación
-===========================
+==================
+Introducción a C++
+==================
 
 :Autor: Emiliano López <emiliano [dot] lopez [at] gmail [dot] com>
 :Fecha: 04/09/2014
 
---------------------------------------
-Unidad 1: Introducción al Lenguaje C++
---------------------------------------
-
-Objetivos
-/////////
-
-- Comprender la estructura de un programa C++, los elementos que lo componen y los tipos de datos que soporta.
-- Desarrollar programas secuenciales utilizando el lenguaje C++
-- Implementar en computadoras: diseñar, editar, compilar, programar y depurar programas.
-
-Bibliografía y referencias
-//////////////////////////
-
-**Libros**
-
-- C++ Cómo programar. 5ta Ed. 2007. Deitel y Deitel. Pearson Educación- Prentice Hall. Capítulo 1.
-- El Lenguaje de Programación C++. 3ra Ed. 2001.Stroustrup Bjarne.Addison Wesley. Capítulo 1, 2.1, 2.2, 2.3 y 2.3.1.
-- How to think like a computer scientist. 2012. Allen B. Downey. Capítulo 1 y 2.
-- Jumping into C++. Alex Allain (www.cprogramming.com). Capítulo 2 y 3.
-
-**Web**
-
-- www.cplusplus.com/doc/tutorial/program_structure
-- www.cplusplus.com/doc/tutorial/variables
-- www.cplusplus.com/doc/tutorial/constants
-- www.cplusplus.com/doc/tutorial/operators
-- www.cplusplus.com/doc/tutorial/basic_io
-- www.cprogramming.com/tutorial/lesson1.html
-- http://es.wikibooks.org/wiki/Programación_en_C++/Lo_más_básico
-
-Ejercicios
-//////////
 
 Ejercicio 1
-+++++++++++
+-----------
 
 En el siguiente ejemplo se muestra un programa en C++:
 
@@ -60,7 +27,7 @@ En el siguiente ejemplo se muestra un programa en C++:
 Analice el código del siguiente programa C++ utilizado para la conversión entre grados Celsius y Fahrenheit. ¿Los resultados son correctos? ¿Qué modificación haría?
 
 Ejercicio 2
-+++++++++++
+-----------
 
 Realice un programa en C++ de conversión de unidades de distancia, donde se ingrese una longitud en metros y se obtenga la distancia en pulgadas, pies, yardas y millas.  Sabiendo que:
 
@@ -78,7 +45,7 @@ Como verificación: 640 metros = 25196,85 pulgadas = 2099,74 pies = 699,91 yarda
 
 
 Ejercicio 3
-+++++++++++
+-----------
 
 La cocción de un huevo pasado por agua debe ser de tal modo que la clara se coagule sin que lo haga la yema. La clara se coagula para temperaturas superiores a 63 °C mientras que la yema lo hace para temperaturas superiores a 70 °C, por lo tanto para coagular la clara el huevo debe estar un tiempo suficiente a una temperatura superior a 63 °C pero la yema no debe superar los 70 °C. La siguiente fórmula expresa el tiempo “t” que demora en alcanzar la yema la temperatura “Ty”.
 
@@ -93,16 +60,15 @@ Implemente la fórmula en un programa C++, y obtenga el tiempo para T w = 100 °
 usando Tw = 4 °C si el huevo estaba en la heladera, y T w =20 °C si se encontraba a temperatura
 ambiente.
 
-Soluciones
-//////////
+Veamos a continuación posibles soluciones y su explicación
 
-Ej. 1
-+++++
+Solución Ej. 1
+--------------
 
 En problema radica en las operaciones entre números enteros. Se debe tener en cuenta que operar entre números enteros da como resultado un valor del mismo tipo. Con lo cual la fracción 9/5 trunca los decimales y por ese motivo el resultado es incorrecto. La solución es que al menos una de las dos constantes sea flotante, por ejemplo: 9.0/5
 
-Ej. 2
-+++++
+Solución Ej. 2
+--------------
 
 .. code-block:: cpp
 	
@@ -142,8 +108,8 @@ Ej. 2
 	}
 
 
-Ej. 3
-+++++
+Solución Ej. 3
+--------------
 
 .. code-block:: cpp
 	

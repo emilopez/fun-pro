@@ -1,42 +1,13 @@
-===========================
-Fundamentos de Programación
-===========================
+=========
+Funciones
+=========
 
 :Autor: Emiliano López <emiliano [dot] lopez [at] gmail [dot] com>
 :Fecha: 04/09/2014
 
--------------------
-Unidad 3: Funciones
--------------------
-
-Objetivos
-/////////
-
-- Comprender las ventajas de usar subprogramas
-- Comprender cómo construir programas modulares mediante el uso de funciones.
-- Crear nuevas funciones.
-- Comprender el mecanismo utilizado para pasar información a las funciones.
-- Comprender cómo escribir y utilizar funciones que se llaman a sí mismas.
-
-Bibliografía y referencias
-//////////////////////////
-
-**Libros**
-
-- Apuntes de cátedra Fundamentos de Programación. 2011. Loyarte Horacio. Unidad 8.
-- C++ Cómo programar. 5ta Ed. 2007. Deitel y Deitel. Pearson Educación- Prentice Hall. Capítulo 3.
-- El Lenguaje de Programación C++. 3ra Ed. 2001.Stroustrup Bjarne.Addison Wesley. Capítulo 7.
-- How to think like a computer scientist. 2012. Allen B. Downey. Capítulo 3.
-- Jumping into C++. Alex Allain (www.cprogramming.com). Capítulo 6.
-
-**Web**
-
-- http://www.cplusplus.com/doc/tutorial/functions
-- www.cprogramming.com/tutorial/lesson4.html
-- http://es.wikibooks.org/wiki/Programación_en_C++/Funciones
 
 Motivación
-//////////
+----------
 
 ¿Qué son?
 	Conjunto de operaciones agrupadas que pueden ser **invocadas** desde diferentes partes de un
@@ -48,7 +19,7 @@ Ventajas
 	- Posibilitan la reusabilidad del código, llamar funciones desde distintos programas.
 
 Ejemplo 1: número par
-/////////////////////
+---------------------
 
 - Programa principal
 
@@ -76,12 +47,8 @@ Ejemplo 1: número par
 #. Se le envía **n** como dato de entrada.
 #. La función recibe el parámetro, realiza una operación y **devuelve un resultado en su nombre**.
 
-Ejercicios
-//////////
-
-
 Ejercicio 1 (8.3.a)
-+++++++++++++++++++
+-------------------
 
 Escriba un programa que permita calcular el **área de un triángulo** a partir de conocer: a) la base y altura, b) las coordenadas de sus 3 vértices y, c) la longitud de sus lados. Resuelva el problema utilizando funciones, devolviendo además en el segundo caso la longitud de los lados. 
 
@@ -99,7 +66,7 @@ Presente un menú que permita al usuario elegir una opción para calcular el ár
 	Opcion: 
 
 Ayuda 
------
+''''''
 
 Puede basarse en los siguientes prototipos:
 
@@ -149,7 +116,7 @@ Las fórmulas para cada cálculo son las siguientes:
 - Investigue el modo de modularizar en diferentes archivos y compilar las funciones en C++.
 
 Ejercicio 2 (8.9)
-+++++++++++++++++
+-----------------
 
 En un banco se ha depositado un capital inicial *m* por el cual se recibe anualmente un interés *x*. Se solicita que determine el capital que se tendrá al cabo de *n* años, teniendo en cuenta que el capital obtenido luego de un año es el capital inicial del año siguiente. Resuelva el problema utilizando función recursiva.
 
@@ -168,17 +135,17 @@ El seguimiento de las sucesivas llamadas a si misma se observa a continuación, 
 .. image:: img/recursividad_ej2.jpeg
 	:width: 80%
 
-Soluciones
-//////////
+Veamos las posibles soluciones
 
-Ejercicio 1
-+++++++++++
+
+Solución al Ej. 1
+-----------------
 
 .. code-block:: cpp
 	:include: ej/ej8.3.cpp
 
 Modularizar el programa
------------------------
+''''''''''''''''''''''''
 
 Del programa realizado vamos a crear tres archivos:
 
@@ -229,8 +196,8 @@ Lo que finalmente nos va a generar el archivo **ej8.3.bin**
 .. code-block:: cpp
 	:include: ej/modularizado/ej8.3.cpp
 
-Ejercicio 2
-+++++++++++
+Solución al Ej. 2
+-----------------
 
 .. code-block:: cpp
 	:include: ej/ej8.9.cpp
