@@ -1,40 +1,14 @@
-===========================
-Fundamentos de Programación
-===========================
+========
+CStrings
+========
 
 :Autor: Emiliano López <emiliano [dot] lopez [at] gmail [dot] com>
 :Fecha: 04/09/2014
 
-------------------
-Unidad 5: CStrings
-------------------
-
-Objetivos
-/////////
-
-- Comprender la similitud entre arreglos y cadenas de caracteres cstrings.
-- Utilizar funciones predefinidas para el manejo de cadenas de caracteres.
-- Implementar funciones para el manejo de cadenas de caracteres.
-
-Bibliografía y referencias
-//////////////////////////
-
-**Libros**
-
-- Apuntes de cátedra Fundamentos de Programación. 2011. Loyarte Horacio. Unidad 10.
-- C++ Cómo programar. 5ta Ed. 2007. Deitel y Deitel. Pearson Educación- Prentice Hall. Capítulo 5.12.
-- El Lenguaje de Programación C++. 3ra Ed. 2001.Stroustrup Bjarne. Addison Wesley. 
-- How to think like a computer scientist. 2012. Allen B. Downey.
-- Jumping into C++. Alex Allain (www.cprogramming.com)
-
-**Web**
-
-- www.cplusplus.com/reference/cstring
-- www.cprogramming.com/tutorial/lesson9.html
-- http://es.wikibooks.org/wiki/Programación_en_C++/Arrays_y_cadenas_de_texto
+.. contents:: Tabla de contenidos
 
 Introducción
-////////////
+------------
 
 Un cstring es *tal cual* un arreglo clásico pero de caracteres, con ciertas particularidades:
 
@@ -43,7 +17,7 @@ Un cstring es *tal cual* un arreglo clásico pero de caracteres, con ciertas par
 - Existen ciertas funciones predefinidas para realizar operaciones sobre las mismas.
 
 Declaración y definición
-////////////////////////
+------------------------
 
 Se pueden declarar como arreglos, dándole la dimensión o dejando que la calcule solito y solo. Acá, en los dos primeros ejemplos, los defino (inicializo) en la misma declaración, luego solo lo declaro:
 
@@ -66,7 +40,7 @@ Otra forma de declararlos es como punteros a char, algo así:
 
 
 Asignación y lectura
-////////////////////
+--------------------
 
 No es posible hacer una asignación como lo hacemos de una variable. Tengamos en cuenta que es un arreglo, y no podemos asignar un arreglo de enteros a otro simplemente con una operación a través del signo **=**. Es tal cuál un arreglo, por qué? porque es un arreglo.
 
@@ -97,10 +71,10 @@ La lectura puede hacerse utilizando el clásico **cin**, pero es preferible evit
 	strcpy(cad2,cad1);
 
 Funciones prefefinidas
-//////////////////////
+----------------------
 
 1). strlen
-++++++++++
+''''''''''
 
 Para calcular la longitud de una cadena:
 
@@ -121,7 +95,7 @@ Una función equivalente hecha a pata sería:
 		}
 
 2). strcpy
-++++++++++
+'''''''''''
 
 Para asignar una cadena a otra:
 
@@ -135,7 +109,7 @@ Para asignar una cadena a otra:
 	:include: ej/tutorial/ej-strcpy.cpp
 
 3). strncpy
-+++++++++++
+''''''''''''
 
 Para asignar una cantidad de caracteres de una cadena a otra:
 
@@ -149,7 +123,7 @@ Para asignar una cantidad de caracteres de una cadena a otra:
 	:include: ej/tutorial/ej-strncpy.cpp
 
 4). strcat
-++++++++++
+''''''''''
 
 Para concatear una cadena a otra
 
@@ -164,7 +138,7 @@ Para concatear una cadena a otra
 
 
 5). strncat
-+++++++++++
+'''''''''''
 
 Para concatenar una cierta cantidad de caracteres a otra.
 
@@ -178,7 +152,7 @@ Para concatenar una cierta cantidad de caracteres a otra.
 	:include: ej/tutorial/ej-strncat.cpp
 
 6). strcmp
-++++++++++
+''''''''''
 
 Compara dos cadenas, si son iguales o mayor o menor
 
@@ -192,7 +166,7 @@ Compara dos cadenas, si son iguales o mayor o menor
 	:include: ej/tutorial/ej-strcmp.cpp
 
 7). strncmp
-+++++++++++
+'''''''''''
 
 Compara los n primeros caracteres de dos cadenas, si son iguales o mayor o menor
 
@@ -206,7 +180,7 @@ Compara los n primeros caracteres de dos cadenas, si son iguales o mayor o menor
 	:include: ej/tutorial/ej-strncmp.cpp
 
 8). strchr
-++++++++++
+''''''''''
 
 Busca un único caracter en una cadena comenzando desde la izquierda retornando la cadena desde la aparición del caracter (puntero a la primer ocurrencia) o NULL en caso que no se lo encuentre. 
 
@@ -227,7 +201,7 @@ Se observa que los valores se encuentran separados por el signo punto y coma (";
 
 
 9). strrchr
-+++++++++++
+'''''''''''
 
 Busca un único caracter en una cadena comenzando desde la derecha
 
@@ -241,7 +215,7 @@ Busca un único caracter en una cadena comenzando desde la derecha
 	:include: ej/tutorial/ej-strrchr.cpp
 
 10). strstr
-+++++++++++
+'''''''''''
 
 Busca una cadena dentro de otra. Funciona similar a strchr con la diferencia que permite buscar una una cadena -una palabra o más de un caracter- dentro de otra. 
 
@@ -250,7 +224,7 @@ Busca una cadena dentro de otra. Funciona similar a strchr con la diferencia que
 	const char *strstr (const char *cad, const char *sub); // buscar subcadena
 
 11). strspn
-+++++++++++
+''''''''''''
 
 Busca dentro de la cadena **cad** *alguno* de los caracteres que son parte de la cadena **cars** devolviendo la posición de la primer ocurrencia. Si no encuentra ninguna ocurrencia devuelve la longitud de la cadena **cad**.
 
@@ -264,7 +238,7 @@ Busca dentro de la cadena **cad** *alguno* de los caracteres que son parte de la
 	:include: ej/tutorial/ej-strspn.cpp
 
 12). strtok
-+++++++++++
+''''''''''''
 
 Devuelve la cadena hasta donde se haya encontrado algunos de los carateres buscados. strtok modifica la cadena original, por lo tanto es necesario guardarla si no se desea perderla. La primer llamada (para conseguir el primer token) se hace con la cadena (cadena1), las llamadas sucesivas (para obtener los tokens restantes) se hacen con NULL.
 
@@ -278,10 +252,10 @@ Devuelve la cadena hasta donde se haya encontrado algunos de los carateres busca
 	:include: ej/tutorial/ej-strtok.cpp
 
 Ejercicios
-//////////
+----------
 
 Ejercicio 1
-+++++++++++
+'''''''''''
 
 Las fechas comúnmente se imprimen se imprimen en distintos formatos, dos de los ejemplos más comunes son:
 
@@ -292,7 +266,7 @@ Escriba un programa que lea la fecha en el primer formato y lo imprima en el seg
 
 
 Ejercicio 2
-+++++++++++
+'''''''''''
 
 Dado un cstring con una frase, por ejemplo: "Hola, todo bien?", se generan las
 siguientes tres salidas (separadas por línea en blanco):
@@ -303,16 +277,16 @@ siguientes tres salidas (separadas por línea en blanco):
 Identifique el funcionamiento del programa que generó la salida previa y desarróllelo creando sus propias funciones. 
 
 Soluciones
-//////////
+----------
 
 Ej. 1
-+++++
+'''''
 
 .. code-block:: cpp
 	:include: ej/ej10.7.cpp
 
 Ej. 2
-+++++
+'''''
 
 .. code-block:: cpp
 	:include: ej/ej10.3.cpp
