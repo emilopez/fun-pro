@@ -5,6 +5,7 @@ Introducción a C++
 :Autor: Emiliano López <emiliano [dot] lopez [at] gmail [dot] com>
 :Fecha: 04/09/2014
 
+.. contents:: Tabla de contenidos
 
 Ejercicio 1
 -----------
