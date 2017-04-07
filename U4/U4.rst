@@ -8,8 +8,8 @@ Structs
 .. contents:: Tabla de contenidos
 
 
-Structs
--------
+Motivación
+----------
 
 Los struct sirven para declarar nuevos tipos de datos. Son una estructura de datos que sirven para agrupar otros tipos de datos y denominarlos con un nombre que luego puede ser utilizado para declarar variables de este tipo.
 
