@@ -12,3 +12,13 @@ Tabla de contenidos
 * `Funciones <https://github.com/emilopez/fun-pro/blob/master/funciones.rst>`__
 * `Structs <https://github.com/emilopez/fun-pro/blob/master/structs.rst>`__
 * `CStrings <https://github.com/emilopez/fun-pro/blob/master/cstrings.rst>`__
+
+* `Vectores <https://github.com/emilopez/fun-pro/blob/master/pilasycolas.rst>`__
+* `Pilas y colas <https://github.com/emilopez/fun-pro/blob/master/pilas_y_colas.rst>`__
+* `POO <https://github.com/emilopez/fun-pro/blob/master/poo.rst>`__
+* `Archivos de texto <https://github.com/emilopez/fun-pro/blob/master/archivos_texto.rst>`__
+* `Archivos de binarios <https://github.com/emilopez/fun-pro/blob/master/archivos_binarios.rst>`__
+* `Templates <https://github.com/emilopez/fun-pro/blob/master/templates.rst>`__
+* `STL <https://github.com/emilopez/fun-pro/blob/master/stl.rst>`__
+
+
