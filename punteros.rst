@@ -44,7 +44,7 @@ mostrar el contenido de lo que apunta ``pb`` debería hacer:
 
 .. code-block:: cpp
     
-    cout << *pb
+    cout << *pb;
 
 Eso nos mostraría lo que tiene almacenado la variabla estática ``a``. Al asterisco en este caso se lo denomina operador de desrreferencia, no hace falta explicar las razones de tan intrincado nombre.
 
