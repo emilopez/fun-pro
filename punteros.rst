@@ -58,3 +58,35 @@ Utilizando aritmética de punteros podemos referirnos a los elementos, por lo qu
 deberíamos hacer: ``*(v + 2)= 8;``.
 
 La equivalencia es ``v[i] <-> *(v + i)``.
+
+Como bien sabemos, los arreglos estáticos deben dimensionarse utilizando una constante, esto es: ``int v[10];``, donde ese valor 10
+no puede ser reemplazado por una variable ingresada por el usuario. Esta liminate puede ser salvada creando un arreglo en forma dinámica.
+
+- Yo me pregunto, ¿cuál es la dirección de memoria del elemento de la posición 3?
+
+La respuesta es: ``p+3``;
+
+- ¿Por qué funciona esto?
+
+Como sabe el tipo de dato que contiene, acá son enteros, se desplaza los bytes necesarios para llegar al cuarto lugar, índice 3. Cada entero ocupa 4 bytes, por lo que en realidad se está desplazando 3*4 bytes en la memoria, pero eso es transparente para el programador.
+
+Arreglos dinámicos
+''''''''''''''''''
+
+Los arreglos estáticos ocupan la parte de la memoria denominada stack, es limitada y muy inferior a la porción de la memoria denominada heap. Al crear un arreglo en forma dinámica se almacena en el heap y la forma de hacerlo es la siguiente:
+
+.. code-block:: cpp
+
+    int N;
+    cin >> N;
+    
+    int *p = new int[N];
+    
+De este modo se creó dinámicamente un arreglo en la memoria cuya dimensión fue ingresada por el usuario, funcionalidad no permitida
+en arreglos estáticos. Ahora el puntero ``p`` apunta al primer elemento del arreglo y se pueden utilizar ambas notaciones para acceder, por ejemplo;
+
+.. code-block:: cpp
+
+    for (int i = 0; i< N; i++)
+        cin >> *(p+i); // equivalente a p[i]
+    
