@@ -48,4 +48,13 @@ mostrar el contenido de lo que apunta ``pb`` debería hacer:
 
 Eso nos mostraría lo que tiene almacenado la variabla estática ``a``. Al asterisco en este caso se lo denomina operador de desrreferencia, no hace falta explicar las razones de tan intrincado nombre.
 
+Aritmética y arreglos
+---------------------
 
+Un arreglo estático se declara haciendo ``int v[10];`` y el acceso a los elementos se realiza a través de un índice, 
+por ejemplo, el tercer elemento se encuentra bajo el índice 2: ``v[2] = 8;``.
+
+Utilizando aritmética de punteros podemos referirnos a los elementos, por lo que para replicar la última asignación
+deberíamos hacer: ``*(v + 2)= 8;``.
+
+La equivalencia es ``v[i] <-> *(v + i)``.
