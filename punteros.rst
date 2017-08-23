@@ -27,7 +27,9 @@ En la declaración vemos que el asterisco es quien nos indica que es un puntero,
 a un tipo de dato entero. ``a`` es una variable estática, cuya dirección de memoria se obtiene anteponiendo
 el operador ``&``. De ahí que al declarar un puntero se le debe asignar algo que sea una dirección, en este caso
 vemos 2 ejemplos, el ya mencionado que usa la dirección de la variable estática ``a``, o bien creando un nuevo
-espacio en memoria de forma dinámica, en este caso utilizando ``new int``.
+espacio en memoria de forma dinámica, en este caso utilizando ``new int``. 
+
+Por cada new que se utiliza debería haber un delete correspondiente: ``delete pa``;
 
 Si se desdobla la operación de declaración y asignación entonces no se utiliza el asterisco en la asignación, 
 para el caso del puntero ``pb`` sería de la siguiente manera:
@@ -89,4 +91,5 @@ en arreglos estáticos. Ahora el puntero ``p`` apunta al primer elemento del arr
 
     for (int i = 0; i< N; i++)
         cin >> *(p+i); // equivalente a p[i]
-    
+
+Tal como se dijo previamente, por cada new debe haber un delete, en el caso de arreglos dinámicos la sintaxis para liberar la memoria consiste en: ``delete [] p;``. 
