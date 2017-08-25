@@ -93,3 +93,29 @@ en arreglos estáticos. Ahora el puntero ``p`` apunta al primer elemento del arr
         cin >> *(p+i); // equivalente a p[i]
 
 Tal como se dijo previamente, por cada new debe haber un delete, en el caso de arreglos dinámicos la sintaxis para liberar la memoria consiste en: ``delete [] p;``. 
+
+Matrices
+--------
+
+Podemos declarar matricez usando punteros pero según el modo en que se lo haga será necesario usar constantes al dimensionarla.
+
+Por ejemplo, el siguiente caso nos permite declarar y dimensionar una matriz cuyas filas son dinámicas (f) pero las columnas estáticas.
+
+.. code-block:: cpp
+
+    int f = 5;
+    int (*p)[10] = new int [f][10];
+    
+Esta limitante puede ser salvada haciendo la matriz completamente dinámica utilizando un puntero a punteros, sería:
+
+
+.. code-block:: cpp
+
+    cin>>f>>c; 
+    int **p;                    // puntero a punteros de enteros
+    p = new int*[f];            // p apunta a un arreglo de f punteros
+    for (int i=0; i<f; i++)
+      *(p+i) = new int[c];      // el contenido de lo que apunte p es un puntero
+                                // por eso le asigno un arreglo de enteros creados dinamicamente
+      
+ 
