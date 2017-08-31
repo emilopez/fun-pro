@@ -12,13 +12,13 @@ Tabla de contenidos
 * `Funciones <https://github.com/emilopez/fun-pro/blob/master/funciones.rst>`__
 * `Structs <https://github.com/emilopez/fun-pro/blob/master/structs.rst>`__
 * `CStrings <https://github.com/emilopez/fun-pro/blob/master/cstrings.rst>`__
+* `Punteros <https://github.com/emilopez/fun-pro/blob/master/punteros.rst>`__
+* `POO <https://github.com/emilopez/fun-pro/blob/master/poo.rst>`__
 
 Por completar:
 
 * `Vectores <https://github.com/emilopez/fun-pro/blob/master/vectorSTL.rst>`__
-* `Punteros <https://github.com/emilopez/fun-pro/blob/master/punteros.rst>`__
 * `Pilas y colas <https://github.com/emilopez/fun-pro/blob/master/pilas_y_colas.rst>`__
-* `POO <https://github.com/emilopez/fun-pro/blob/master/poo.rst>`__
 * `Sobrecarga de operadores <https://github.com/emilopez/fun-pro/blob/master/sobrecarga.rst>`__
 * `Strings <https://github.com/emilopez/fun-pro/blob/master/strings.rst>`__
 * `Archivos de texto <https://github.com/emilopez/fun-pro/blob/master/archivos_texto.rst>`__
