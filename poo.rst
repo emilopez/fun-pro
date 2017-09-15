@@ -56,7 +56,7 @@ tengamos asociada la función ``calcular_edad()`` de modo que su uso sería del 
 .. code-block:: cpp
 
     long HOY = 20170915;
-    p.calcular_edad(HOY);
+    cout << "La edad es: " << p.calcular_edad(HOY);
 
 No me podés negar que queda mas elegante. Ahora bien, veamos cómo se define la clase ``Persona``:
 
@@ -74,3 +74,55 @@ No me podés negar que queda mas elegante. Ahora bien, veamos cómo se define la
 De ese modo queda hermosamente declarada una clase. Ahora bien, desde adentro de 
 la clase se ve que no hay drama en acceder a los atributos nom y fecha_nacimiento pero 
 ¿cómo los accedemos desde el programa principal?
+
+Bueno, resulta ser que a diferencia de los structs los atributos miembro de una clase son
+privados a menos que se los ponga explícitamente bajo la cláusula ``public``.
+
+¿Qué significa que sean privados? Significa que desde el programa principal donde 
+se cree un objeto instanciando a esta clase, no se podrá acceder a ellos, por lo tanto
+vamos a tener que crear funciones, de aquí en más les diremos ``métodos`` tanto
+para modificarlos como para verlos. Esto se suele denominar en la jerga, setters y getters.
+
+Los setters son los métodos usados para escribir datos en los atributos privados
+y los getters para mostrarlos. 
+
+Así que podríamo tener 4 métodos, 2 para consultar tanto el nombre como la fecha
+de nacimiento y otros 2 para setearlos. La cosa quedaría:
+
+.. code-block:: cpp
+
+    class Persona{
+        string nom;
+        long fecha_nacimiento;
+    public:
+        void setNom(string n){
+            nom = n;
+        }
+        void setFechaNac(long fn){
+            fecha_nacimiento = fn;
+        }
+        string getNom(){
+            return nom;
+        }
+        long getFechaNac(){
+            return fecha_nacimiento;
+        }
+        int calcular_edad(long HOY){
+            return (fecha_nacimiento - HOY)/10000;
+        }
+    };
+    
+También podríamos haber hecho un único método para setear ambos y lo mismo para consultarlos. 
+Dependerá del diseño que te convenga, en general hay que ir uno por uno, para que luego tengas más
+flexibilidad desde el programa cliente, si, ya se que es un embole.
+
+Ahora sí entonces nos queda mostrar cómo sería su uso:
+
+.. code-block:: cpp
+    
+    Persona p;
+    p.setNom("Juan de los Palotes");
+    p.setFechaNac(19810328);
+    long HOY = 20170915;
+    cout << "La edad es: " << p.calcular_edad(HOY);
+
