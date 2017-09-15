@@ -51,7 +51,7 @@ Sería algo así:
     cout << "La edad es: " << calcular_edad(a, HOY) 
      
 Bueno, ahora vamos a hacer una clase Persona donde sería algo muy parecido al struct pero donde
- tengamos asociada la función ``calcular_edad()`` de modo que su uso sería del siguiente modo:
+tengamos asociada la función ``calcular_edad()`` de modo que su uso sería del siguiente modo:
 
 .. code-block:: cpp
 
