@@ -23,9 +23,9 @@ Declaración
 
 Para usar POO necesitamos declarar una clase, que es algo así como una plantilla
 que define las propiedades y comportamiento de un objeto. On objeto es una instancia
- de una clase, una qué? se instancia algo cuando se lo declara. A continuación 
- creamos un objeto a del tipo Alumno, entonces decimos que a es una instancia de la
- clase Alumno.
+de una clase, una qué? se instancia algo cuando se lo declara. A continuación 
+creamos un objeto a del tipo Alumno, entonces decimos que a es una instancia de la
+clase Alumno.
 
 .. code-block:: cpp
 
