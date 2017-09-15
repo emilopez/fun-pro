@@ -83,8 +83,12 @@ se cree un objeto instanciando a esta clase, no se podrá acceder a ellos, por l
 vamos a tener que crear funciones, de aquí en más les diremos ``métodos`` tanto
 para modificarlos como para verlos. Esto se suele denominar en la jerga, setters y getters.
 
-Los setters son los métodos usados para escribir datos en los atributos privados
-y los getters para mostrarlos. 
+Setters y getters
+'''''''''''''''''
+
+Los setters y getters son los métodos usados para escribir y consultar los atributos privados, 
+es decir, como ya no podemos acceder porque está oculto (principio de ocultación) tenemos
+que usar los métodos que nos permiten hacerlo. 
 
 Así que podríamo tener 4 métodos, 2 para consultar tanto el nombre como la fecha
 de nacimiento y otros 2 para setearlos. La cosa quedaría:
